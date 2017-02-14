@@ -1,0 +1,102 @@
+    <style>
+    .inputs {
+        width: 85px;
+        display: inline-block;
+    }
+    
+    .radBtn {
+        width: 85px;
+        display: inline-block;
+        padding: 13px 0 5px;
+    }
+    
+    .inputs input {
+        vertical-align: middle;
+        margin-bottom: 13px;
+    }
+    
+    label,
+    .radBtn input,
+    .inputs input {
+        cursor: pointer;
+    }
+    
+    textarea {
+        border-radius: 13px !important;
+    }
+    </style>
+<form action="" method="post" name="form">
+        <a href="https://4.bp.blogspot.com/-X0BPYJw_zdE/VtLIHveDO7I/AAAAAAAAAL0/wiz9dnxtZVk/s1600/carty.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://4.bp.blogspot.com/-X0BPYJw_zdE/VtLIHveDO7I/AAAAAAAAAL0/wiz9dnxtZVk/s1600/carty.jpg" /></a>
+    <h2>Compatible Characters(Ký tự thích hợp)</h2> You can type characters a-z, A-Z, 0-9, and :,.!?)(" '-+=. Chinese characters are not used
+    <br /> Bạn có thể gõ các ký tự &nbsp;a-z, A-Z, 0-9, and :,.!?)(" '-+=. Nói không với Chữ Khựa
+    <br />
+    <h3>Hướng dẫn Dùng</h3>Gõ chữ Vào Ô Vuông chọn kiểu viền chữ,kích thước,loại,khoảng cách các chữ nhận kết quả ô hình chữ nhật
+    <br /> Typing in the square box the type of outline font , size , type , distance between letters received results in rectangular box
+    <br />
+    <div class="col-md-6">
+    <textarea cols="70" id="message" name="message" onkeyup="tarty()" rows="10"></textarea>
+	</div>
+	<div class="col-md-6" id="option">    
+    <div class="radBtn">
+        <input checked="" id="round" name="mode" onclick="tarty()" type="radio" value="0" />
+        <label for="round">
+            ╭
+        </label>
+    </div>
+    <div class="radBtn">
+        <input id="single" name="mode" onclick="tarty()" type="radio" value="0" />
+        <label for="single">
+            ┏
+        </label>
+    </div>
+    <div class="radBtn">
+        <input id="double" name="mode" onclick="tarty()" type="radio" value="0" />
+        <label for="double">
+            ╔
+        </label>
+    </div>
+    <script>
+    $(function() {
+        if (isIE || isFirefox || (isSafari && OSName != "iOS")) {
+            $("#single").attr('checked', 'checked');
+        }
+    });
+    </script>
+    <br />
+    <div class="inputs">
+        <input id="small" onclick="tarty()" type="checkbox" value="0" />
+        <label for="small">
+            Small
+        </label>
+    </div>
+    <div class="inputs">
+        <input id="scissors" onclick="tarty()" type="checkbox" value="0" />
+        <label for="scissors">
+            Cut out
+        </label>
+    </div>
+    <div class="inputs">
+        <input checked="" id="closer" onclick="tarty()" type="checkbox" value="0" />
+        <label for="closer">
+            Closer</label>
+    </div>
+	</div> 
+	<div class="col-md-12">
+    <textarea cols="200" id="output" name="output" onkeyup="fbshow()" rows="20" >
+╔╗────╔╗╔╗──────╔╗
+║║────║║║║─────╔╝╚╗
+║╚═╦══╣║║║╔══╦═╩╗╔╝
+║╔╗║║═╣║║║║╔═╣╔╗║║
+║║║║║═╣╚╣╚╣╚═╣╔╗║╚╗
+╚╝╚╩══╩═╩═╩══╩╝╚╩═╝
+    </textarea>
+    </div>
+    <br />
+    <div id="OMini">
+    </div>
+    <script type="text/javascript">
+    if (navigator.userAgent.indexOf("Opera Mini") > -1) document.getElementById("OMini").innerHTML = '<input type="button" onclick="tarty()" value="Carty">';
+    </script>
+</form>
+    <a class="btn btn-primary" id="submit" onclick="about()">Tác Giả</a>
+    <a class="btn btn-primary btn-hellcat hint--bottom" data-clipboard-target="#output" aria-label="Sao Chép vào bộ nhớ tạm">Copy to Clipboard</a>

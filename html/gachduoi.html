@@ -1,0 +1,20 @@
+<form name="hellcat">
+    <table style="width: 500px;">
+        <tbody>
+            <tr>
+                <td><strong>Chữ Muốn Gạch Dưới</strong></td>
+                <td>
+                    <pre><textarea cols="50" name="original" onkeyup="flip()" rows="8"></textarea></pre>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Chữ đã Gạch Dưới:</strong></td>
+                <td>
+                    <pre><textarea cols="50" id="changed" name="changed" rows="8" style="font-family: arial;"></textarea></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" id="submit" onclick="about()">Tác Giả</a>
+    <a class="btn btn-primary btn-hellcat hint--bottom" data-clipboard-target="#changed" aria-label="Sao Chép vào bộ nhớ tạm">Copy to Clipboard</a>
+</form>
