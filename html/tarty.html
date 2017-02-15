@@ -1,0 +1,60 @@
+<style>
+.inputs {
+    display: inline-block;
+    margin: 13px 10px 0 0;
+    float: left;
+}
+
+.inputs input {
+    vertical-align: middle;
+}
+
+label,
+.inputs input {
+    cursor: pointer;
+}
+
+textarea {
+    border-radius: 13px !important;
+}
+</style>
+<form action="" method="post" name="form">
+    <div class="separator" style="clear: both; text-align: center;">
+        <a href="https://2.bp.blogspot.com/-i4tRicUqXl4/VuRGO8L6EXI/AAAAAAAAAXg/zilIdFuMfTss7aC9JCpFqvfybXR23UG3A/s1600/Untitled.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://2.bp.blogspot.com/-i4tRicUqXl4/VuRGO8L6EXI/AAAAAAAAAXg/zilIdFuMfTss7aC9JCpFqvfybXR23UG3A/s640/Untitled.png"></a>
+    </div>
+    <div class="col-md-6">
+        <textarea cols="90" id="message" name="message" onkeyup="tarty()" rows="16"></textarea>
+    </div>
+    <div class="col-md-6">
+        <div class="inputs">
+            <input id="clean" onclick="tarty()" type="checkbox" value="0">
+            <label for="clean">
+                Brighter
+            </label>
+        </div>
+        <div class="inputs">
+            <input id="perforated" onclick="tarty()" type="checkbox" value="0">
+            <label for="perforated">
+                Perforated
+            </label>
+        </div>
+        <div class="inputs">
+            <input id="scissors" onclick="tarty()" type="checkbox" value="0">
+            <label for="scissors">
+                Cut out</label>
+        </div>
+        <a class="btn btn-primary" id="submit" onclick="about()">Tác Giả</a>
+        <a class="btn btn-primary btn-hellcat hint--bottom" data-clipboard-target="#output" aria-label="Sao Chép vào bộ nhớ tạm">Copy to Clipboard</a>
+    </div>
+    <div class="col-md-12">
+        <textarea cols="200" id="output" name="output" onkeyup="fbshow()" rows="20">
+        </textarea>
+    </div>
+    <br>
+    <div id="OMini">
+    </div>
+    <script type="text/javascript">
+    if (navigator.userAgent.indexOf("Opera Mini") > -1) document.getElementById("OMini").innerHTML = '<input type="button" onclick="tarty()" value="Tarty">';
+    </script>
+    <br>
+</form>

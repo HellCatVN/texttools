@@ -1,0 +1,65 @@
+<style>
+.inputs {
+    display: inline-block;
+    margin: 13px 10px 0 0;
+    float: left;
+}
+
+.inputs input {
+    vertical-align: middle;
+}
+
+label,
+.inputs input {
+    cursor: pointer;
+}
+
+textarea {
+    border-radius: 13px !important;
+}
+</style>
+<form action="" method="post" name="form">
+    <div class="col-md-6">
+        <textarea cols="75" id="message" name="message" onkeyup="tarty()" rows="16"></textarea>
+    </div>
+    <div class="col-md-6">
+        <div class="inputs">
+            <input id="clean" onclick="tarty()" type="checkbox" value="0">
+            <label for="clean">
+                Contrasting
+            </label>
+        </div>
+        <div class="inputs">
+            <input id="perforated" onclick="tarty()" type="checkbox" value="0">
+            <label for="perforated">
+                Spaced</label>
+        </div>
+        <a class="btn btn-primary" id="submit" onclick="about()">Tác Giả</a>
+        <a class="btn btn-primary btn-hellcat hint--bottom" data-clipboard-target="#output" aria-label="Sao Chép vào bộ nhớ tạm">Copy to Clipboard</a>
+    </div>
+    <div class="col-md-12">
+        <textarea cols="150" id="output" name="output" rows="20">
+──────────────────────────────────────────────────────────────────────────────────────────────────────────
+─██████──██████─██████████████─██████─────────██████─────────██████████████─██████████████─██████████████─
+─██░░██──██░░██─██░░░░░░░░░░██─██░░██─────────██░░██─────────██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░██─
+─██░░██──██░░██─██░░██████████─██░░██─────────██░░██─────────██░░██████████─██░░██████░░██─██████░░██████─
+─██░░██──██░░██─██░░██─────────██░░██─────────██░░██─────────██░░██─────────██░░██──██░░██─────██░░██─────
+─██░░██████░░██─██░░██████████─██░░██─────────██░░██─────────██░░██─────────██░░██████░░██─────██░░██─────
+─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░██─────────██░░██─────────██░░██─────────██░░░░░░░░░░██─────██░░██─────
+─██░░██████░░██─██░░██████████─██░░██─────────██░░██─────────██░░██─────────██░░██████░░██─────██░░██─────
+─██░░██──██░░██─██░░██─────────██░░██─────────██░░██─────────██░░██─────────██░░██──██░░██─────██░░██─────
+─██░░██──██░░██─██░░██████████─██░░██████████─██░░██████████─██░░██████████─██░░██──██░░██─────██░░██─────
+─██░░██──██░░██─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░██──██░░██─────██░░██─────
+─██████──██████─██████████████─██████████████─██████████████─██████████████─██████──██████─────██████─────
+──────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+        </textarea>
+    </div>
+    <br>
+    <div id="OMini">
+    </div>
+    <script type="text/javascript">
+    if (navigator.userAgent.indexOf("Opera Mini") > -1) document.getElementById("OMini").innerHTML = '<input type="button" onclick="tarty()" value="Tarty">';
+    </script>
+    <br>
+</form>
